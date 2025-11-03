@@ -1,0 +1,9 @@
+Enter size of first array: 5
+Enter size of second array: 4
+Enter 5 elements:
+12 3 45 7 20
+Enter 4 elements:
+10 8 2 15
+
+Merged sorted array: 2 3 7 8 10 12 15 20 45
+
