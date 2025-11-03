@@ -1,0 +1,66 @@
+
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter choice: 1
+Enter value to push: 4
+Pushed 4 onto stack
+
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter choice: 1
+Enter value to push: 5
+Pushed 5 onto stack
+
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter choice: 1
+Enter value to push: 6
+Pushed 6 onto stack
+
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter choice: 2
+Popped 6 from stack
+
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter choice: 2
+Popped 5 from stack
+
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter choice: 2
+Popped 4 from stack
+
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter choice: 22
+Invalid choice
+
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter choice: 2
+Stack is empty
+
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter choice: 4
+Exiting program

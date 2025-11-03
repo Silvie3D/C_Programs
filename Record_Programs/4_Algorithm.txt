@@ -1,0 +1,23 @@
+Step 1: Start the program and define a structure called Node containing two members, An integer data field and a pointer next to store the address of the next node.
+
+Step 2: Initialize the head pointer to NULL to indicate that the list is empty.
+
+Step 3: Create a function to insert a new node at the beginning. Allocate memory for a new node. Store the data. Point the new node’s next to the current head. Update head to point to the new node.
+
+Step 4: Create a function to insert a new node at the end. Allocate memory for a new node. Store the data and set next to NULL. If the list is empty, make head point to the new node. Otherwise, traverse to the last node and connect its next pointer to the new node.
+
+Step 5: Create a function to insert a node at a specific position. If the position is 1, perform the same steps as insertion at beginning. Otherwise, traverse up to the (pos-1)th node and insert the new node between nodes.
+
+Step 6: Create a function to delete the first node. If the list is empty, show a message. Otherwise, store the head node in a temporary variable, move head to the next node, and free the old first node.
+
+Step 7: Create a function to delete the last node. If the list is empty, show a message. If only one node exists, delete it and set head to NULL. Otherwise, traverse to the second last node, delete the last node, and set its next to NULL.
+
+Step 8: Create a function to delete a node at a specific position. If the position is 1, delete the first node. Otherwise, traverse up to the (pos-1)th node, adjust pointers to skip the deleted node, and free its memory.
+
+Step 9: Create a function to display all nodes. If the list is empty, print a message. Otherwise, traverse from head and print all node values.
+
+Step 10: In the main function, display a menu with options insert and delete at various positions of the linked list such as beginning, specific positions, or at the end.
+
+Step 11: Perform the corresponding operations by calling the respective functions using switch cases based on user input until the user chooses to exit.
+
+Step 12: End the program.

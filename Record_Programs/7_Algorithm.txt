@@ -1,0 +1,39 @@
+Step 1: Start the program and define a structure called Node containing three members — an integer data field, and two pointers: prev (to store address of the previous node) and next (to store address of the next node).
+
+Step 2: Initialize two global pointers, head and tail, to NULL to indicate that the doubly linked list is empty.
+
+Step 3: Create a function insertAtBeginning() to insert a new node at the beginning of the list. Allocate memory for a new node and input data from the user. Set newNode->prev = NULL and newNode->next = head. If the list is not empty, set head->prev = newNode. Update head = newNode. If tail == NULL, set tail = newNode. Print that the element has been inserted at the beginning.
+
+Step 4: Create a function insertAtEnd() to insert a new node at the end of the list. Allocate memory for a new node and input data from the user. Set newNode->next = NULL. If the list is empty, set both head and tail to the new node. Otherwise, link tail->next = newNode and newNode->prev = tail. Update tail = newNode. Print that the element has been inserted at the end.
+
+Step 5: Create a function insertAtPosition() to insert a node at a specific position. Input the position pos. If pos == 1, call insertAtBeginning(). Otherwise, traverse the list to the (pos–1)th node using a temporary pointer. If the position is invalid, print “Invalid position.”
+Otherwise, allocate a new node and link it between two existing nodes:
+– Set newNode->next = temp->next and newNode->prev = temp.
+– If temp->next != NULL, set temp->next->prev = newNode.
+– Set temp->next = newNode.
+If newNode->next == NULL, update tail = newNode. Print that the element has been inserted at the specified position.
+
+Step 6: Create a function deleteFromBeginning() to delete a node from the beginning of the list. If head == NULL, print “List is empty.” Otherwise, store head in a temporary pointer, print the deleted data, and move head = head->next. If head != NULL, set head->prev = NULL; otherwise, set tail = NULL. Free the temporary node.
+
+Step 7: Create a function deleteFromEnd() to delete a node from the end of the list. If tail == NULL, print “List is empty.” Otherwise, store tail in a temporary pointer, print the deleted data, and move tail = tail->prev. If tail != NULL, set tail->next = NULL; otherwise, set head = NULL. Free the temporary node.
+
+Step 8: Create a function deleteFromPosition() to delete a node from a specific position. Input the position pos. If pos == 1, call deleteFromBeginning(). Otherwise, traverse to the (pos–1)th node using a temporary pointer. If temp == NULL or temp->next == NULL, print “Invalid position.” Otherwise, store temp->next in another pointer delNode.
+Adjust the links:
+– Set temp->next = delNode->next.
+– If delNode->next != NULL, set delNode->next->prev = temp.
+– If delNode->next == NULL, update tail = temp.
+Print the deleted value and free delNode.
+
+Step 9: Create a function display() to print all elements in the list.
+If head == NULL, print “List is empty.”
+Otherwise, traverse from head to NULL and print all node values sequentially.
+
+Step 10: In the main() function, display a menu with the following options: 1. Insert at Beginning, 2. Insert at Specific Position, 3. Insert at End, 4. Delete from Beginning, 5. Delete from Specific Position, 6. Delete from End, 7. Display, 8. Exit
+
+Step 11: Based on the user’s choices, If the user selects Option 1 → call the function: insertAtBeginning(). Else If the user selects Option 2 → call the function: insertAtPosition(). Else If the user selects Option 3 → call the function: insertAtEnd(). Else If the user selects Option 4 → call the function: deleteFromBeginning(). Else If the user selects Option 5 → call the function: deleteFromPosition(). Else If the user selects Option 6 → call the function: deleteFromEnd(). Else If the user selects Option 7 → call the function: display(). Else If the user selects Option 8 → exit the program
+→ Otherwise, print “Invalid choice.”
+
+Step 12: Repeat Step 11 until the user selects Exit.
+
+Step 13: End the program.
+

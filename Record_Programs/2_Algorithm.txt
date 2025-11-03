@@ -1,0 +1,21 @@
+Step 1: Start the program. Include the standard input-output header file to use basic I/O functions.
+
+Step 2: Define a function named push() that takes the stack array, the address of top, and the maximum stack size n as parameters. Inside this function, check if the stack is full by comparing top with n - 1. If it is full, print “Stack Overflow.” Otherwise, read a value from the user, increment top by one, and insert the value into the stack at the new top position.
+
+Step 3: Define a function named pop() that takes the stack array and the address of top as parameters. Inside this function, check if the stack is empty by verifying if top is equal to -1. If it is empty, print “Stack Underflow.” Otherwise, display the value being removed, then decrement top by one to remove the topmost element.
+
+Step 4: Define a function named display() that takes the stack array and top as parameters. Check if the stack is empty by verifying if top equals -1. If it is empty, print “Stack is empty.” Otherwise, print all elements of the stack starting from the top down to index 0.
+
+Step 5: In the main function, declare an integer array stack with a fixed size of 100 elements. Also declare integer variables top (initialized to -1), n (stack size), and choice (menu selection).
+
+Step 6: Prompt the user to enter the desired size of the stack and store it in the variable n.
+
+Step 7: Create a loop that repeatedly shows a menu with four options: Push, Pop, Display, and Exit.
+Read the user’s choice and execute the corresponding operation using a switch statement.
+
+Step 8: If the user selects Push, call the push() function and pass the stack array, the address of top, and n. If the user selects Pop, call the pop() function and pass the stack array and the address of top. If the user selects Display, call the display() function and pass the stack array and top. If the user selects Exit, display “Exiting…” and terminate the loop.
+
+Step 9: Repeat the menu until the user selects the Exit option.
+
+Step 10: End the program.
+

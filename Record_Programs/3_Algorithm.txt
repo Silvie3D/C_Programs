@@ -1,0 +1,20 @@
+Step 1: Start the program and initialize an empty queue with a fixed size. Set both front and rear positions to -1 to represent an empty queue.
+
+Step 2: Create a function to insert elements into the queue (enqueue). If the queue is full, display "Queue Overflow".  
+Otherwise, ask the user to enter a value, move the rear position forward, and place the value there. If this is the first element, also set front to 0.
+
+Step 3: Create a function to remove elements from the queue (dequeue). If the queue is empty, display "Queue Underflow". Otherwise, remove the element at the front position and move the front one step forward. If the front crosses the rear, reset both front and rear to -1.
+
+Step 4: Create a function to display all elements in the queue. If the queue is empty, show "Queue is empty". Otherwise, print the elements from the front position up to the rear.
+
+Step 5: In the main process, ask the user to enter the size of the queue.  
+Then continuously display a menu with the following options:  
+- If the user enters 1, call the enqueue function to insert an element.  
+- If the user enters 2, call the dequeue function to remove an element.  
+- If the user enters 3, call the display function to show all elements.  
+- If the user enters 4, print "Exiting..." and stop the program.  
+- For any other input, print "Invalid choice".
+
+Step 6: Repeat this process until the user chooses the Exit option.
+
+Step 7: End the program.
