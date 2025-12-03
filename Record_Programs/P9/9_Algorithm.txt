@@ -1,0 +1,9 @@
+1. Start the program and read the total number of vertices in the graph.
+2. Input the adjacency matrix that defines which vertices are connected.
+3. Initialize all vertices as unvisited.
+4. Read the starting vertex for the DFS traversal.
+5. Begin DFS at the starting vertex by marking it as visited.
+6. Print the current vertex.
+7. From the current vertex, check every other vertex; if there is an edge and that vertex is unvisited, recursively apply DFS on it.
+8. Continue this process until all connected vertices have been explored.
+9. End the program.

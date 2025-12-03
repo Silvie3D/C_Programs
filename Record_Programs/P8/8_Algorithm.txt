@@ -1,0 +1,6 @@
+1. Start the program with an empty BST stored in an array.
+2. Read how many numbers to insert, then read each number.
+3. For every number, keep moving down the tree from the root: go to the left child if it is smaller than the current node, or go to the right child if it is larger, until an empty position is found, then place the number there.
+4. After all insertions, perform an inorder traversal from the root by visiting the left subtree, then the current node, then the right subtree.
+5. Print the values visited during the inorder traversal (which appear in sorted order).
+6. End the program.

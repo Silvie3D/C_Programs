@@ -1,0 +1,9 @@
+1. Start the program. Read the number of nodes and input the adjacency matrix containing all edge weights.
+2. Initialize the parent array so every node is its own parent.
+3. Initialize an edge counter to keep track of how many edges have been added to the MST.
+4. While the number of selected edges is less than `n − 1`, search the entire adjacency matrix to find the smallest-weight edge that connects two nodes belonging to different sets (their parents differ).
+5. When such an edge is found, record its endpoints and its weight.
+6. Join the two sets of these endpoints using the union operation.
+7. Print the selected edge as part of the MST.
+8. Mark this edge as used by setting its weight to a large value, and increase the edge counter before repeating the process.
+9. End the program.

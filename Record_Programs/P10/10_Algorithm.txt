@@ -1,0 +1,8 @@
+1. Start the program and read the number of nodes and input the adjacency matrix of the graph.
+2. Mark all nodes as unvisited initially.
+3. Read the starting node for the BFS traversal.
+4. Mark the starting node as visited and insert it into the queue.
+5. While the queue is not empty, remove the front node and print it.
+6. For that node, check every adjacent node; if it is connected and unvisited, mark it visited and add it to the queue.
+7. Repeat this process until all reachable nodes from the starting node have been processed.
+8. End the program.

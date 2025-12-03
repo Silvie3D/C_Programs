@@ -1,0 +1,9 @@
+1. Start the program. Read the number of nodes and input the adjacency matrix containing the edge weights.
+2. Mark all nodes as unvisited, then mark the first node as visited to start the MST.
+3. Initialize a counter to track how many edges have been added to the MST.
+4. While the number of selected edges is less than `n − 1`, search through all visited nodes and look for the smallest-weight edge that connects to any unvisited node.
+5. When the minimum such edge is found, print it as part of the MST.
+6. Mark the newly connected node as visited.
+7. Increase the edge counter and repeat the process.
+8. Stop when `n − 1` edges have been chosen, completing the minimum spanning tree.
+9. End the program.

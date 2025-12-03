@@ -1,0 +1,8 @@
+How many values: 6
+Enter values: 3
+6
+5
+2
+9
+1
+Inorder: 1 2 3 5 6 9
