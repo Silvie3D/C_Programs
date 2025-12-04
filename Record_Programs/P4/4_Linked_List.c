@@ -132,15 +132,15 @@ void display(struct Node *head) {
 void main() {
 	struct Node *head = NULL;
 	int choice = 0, value, pos;
+	printf("\n1. Insert at beginning\n");
+	printf("2. Insert at position\n");
+	printf("3. Insert at end\n");
+	printf("4. Delete from beginning\n");
+	printf("5. Delete from position\n");
+	printf("6. Delete from end\n");
+	printf("7. Display\n");
+	printf("8. Exit\n");
 	while (choice != 8) {
-		printf("\n1. Insert at beginning\n");
-		printf("2. Insert at position\n");
-		printf("3. Insert at end\n");
-		printf("4. Delete from beginning\n");
-		printf("5. Delete from position\n");
-		printf("6. Delete from end\n");
-		printf("7. Display\n");
-		printf("8. Exit\n");
 		printf("Enter choice: ");
 		scanf("%d", &choice);
 		switch (choice) {

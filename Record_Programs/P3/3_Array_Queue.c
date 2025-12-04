@@ -6,13 +6,13 @@ void enqueue(int queue[], int *rear, int *front, int n) {
 		printf("Queue Overflow\n");
 		return;
 	}
-	printf("Enter value to insert: ");
+	printf("Enter value: ");
 	scanf("%d", &value);
 	if (*front == -1)
 		*front = 0;
 	(*rear)++;
 	queue[*rear] = value;
-	printf("Inserted %d into queue\n", value);
+	printf("Inserted %d\n", value);
 }
 
 void dequeue(int queue[], int *rear, int *front) {
@@ -20,7 +20,7 @@ void dequeue(int queue[], int *rear, int *front) {
 		printf("Queue Underflow\n");
 		return;
 	}
-	printf("Deleted %d from queue\n", queue[*front]);
+	printf("Deleted %d\n", queue[*front]);
 	(*front)++;
 	if (*front > *rear) {
 		*front = *rear = -1;
@@ -46,9 +46,10 @@ void main() {
 	scanf("%d", &n);
 
 	int queue[n];
+	printf("\n1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\n");
 
 	while (exit == 0) {
-		printf("\n1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\nEnter choice: ");
+		printf("\nEnter choice: ");
 		scanf("%d", &choice);
 
 		switch (choice) {

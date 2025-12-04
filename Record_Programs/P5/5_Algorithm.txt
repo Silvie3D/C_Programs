@@ -1,22 +1,8 @@
-Step 1: Start the program and define a structure called Node containing two members — an integer data field and a pointer next to store the address of the next node.
-
-Step 2: Initialize head to NULL to indicate that the stack is empty.
-
-Step 3: Create a function push() to insert an element at the end of the linked list. Allocate memory for a new node and store the data entered by the user. Set the node’s next pointer to NULL. If the list is empty, make head point to the new node. Otherwise, traverse to the last node and connect its next pointer to the new node. Print that the element has been pushed onto the stack.
-
-Step 4: Create a function pop() to delete the last node (top element of the stack). If head is NULL, print “Stack is empty.” If only one node exists (head->next == NULL), print its data, free the node, and set head to NULL. Otherwise, traverse to the second-last node, store the last node in a temporary pointer, print the deleted value, free it, and set the second-last node’s next to NULL.
-
-Step 5: Create a function display() to show all stack elements. If head is NULL, print “Stack is empty.” Otherwise, traverse from head to the end and print all node values.
-
-Step 6: In main(), display a menu with options such as Push, Pop, Display and Exit.
-
-Step 7: If user chooses:
-        Option 1 → call push() function to insert element at end.
-        Option 2 → call pop() function to remove element from end.
-        Option 3 → call display() function to view stack contents.
-        Option 4 → exit the program.
-        Otherwise, print “Invalid choice.”
-
-Step 8: Repeat Step 7 until the user selects Exit.
-
-Step 9: End the program.
+1. Start the program. Define a `Node` structure with `data` and `next`; set `head = NULL`.
+2. `push()`: create a new node with user data, `next = NULL`; if list empty set `head`, else traverse to last and link it.
+3. `pop()`: if empty print message; if one node print and delete it; otherwise traverse to second-last, delete last, and set its `next` to NULL.
+4. `display()`: if empty print message; else traverse from head and print all values.
+5. In `main()`, show menu: Push, Pop, Display, Exit.
+6. Based on user choice, call the corresponding function or exit; otherwise show “Invalid choice.”
+7. Loop menu until Exit.
+8. End program.

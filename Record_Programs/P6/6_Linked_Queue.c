@@ -17,7 +17,7 @@ void enqueue(struct Node **head, struct Node **tail, int value) {
 		(*tail)->next = newNode;
 		*tail = newNode;
 	}
-	printf("Enqueued %d into queue\n", value);
+	printf("Enqueued %d\n", value);
 }
 
 void dequeue(struct Node **head, struct Node **tail) {
@@ -26,7 +26,7 @@ void dequeue(struct Node **head, struct Node **tail) {
 		return;
 	}
 	struct Node *temp = *head;
-	printf("Dequeued %d from queue\n", temp->data);
+	printf("Dequeued %d\n", temp->data);
 	*head = (*head)->next;
 	free(temp);
 	if (*head == NULL) {
@@ -52,16 +52,13 @@ void main() {
 	struct Node *head = NULL;
 	struct Node *tail = NULL;
 	int choice = 0, value;
+	printf("\n1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\n");
 	while (choice != 4) {
-		printf("\n1. Enqueue\n");
-		printf("2. Dequeue\n");
-		printf("3. Display\n");
-		printf("4. Exit\n");
 		printf("Enter choice: ");
 		scanf("%d", &choice);
 		switch (choice) {
 			case 1:
-				printf("Enter value to enqueue: ");
+				printf("Enter value: ");
 				scanf("%d", &value);
 				enqueue(&head, &tail, value);
 				break;

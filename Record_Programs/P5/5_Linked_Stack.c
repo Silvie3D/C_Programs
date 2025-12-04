@@ -19,7 +19,7 @@ void push(struct Node **head, int value) {
 		}
 		temp->next = newNode;
 	}
-	printf("Pushed %d onto stack\n", value);
+	printf("Pushed %d\n", value);
 }
 
 void pop(struct Node **head) {
@@ -28,7 +28,7 @@ void pop(struct Node **head) {
 		return;
 	}
 	if ((*head)->next == NULL) {
-		printf("Popped %d from stack\n", (*head)->data);
+		printf("Popped %d\n", (*head)->data);
 		free(*head);
 		*head = NULL;
 		return;
@@ -39,7 +39,7 @@ void pop(struct Node **head) {
 		prev = temp;
 		temp = temp->next;
 	}
-	printf("Popped %d from stack\n", temp->data);
+	printf("Popped %d\n", temp->data);
 	free(temp);
 	prev->next = NULL;
 }
@@ -61,16 +61,13 @@ void display(struct Node *head) {
 void main() {
 	struct Node *head = NULL;
 	int choice = 0, value;
+	printf("\n1. Push\n2. Pop\n3. Display\n4. Exit\n");
 	while (choice != 4) {
-		printf("\n1. Push\n");
-		printf("2. Pop\n");
-		printf("3. Display\n");
-		printf("4. Exit\n");
 		printf("Enter choice: ");
 		scanf("%d", &choice);
 		switch (choice) {
 			case 1:
-				printf("Enter value to push: ");
+				printf("Enter value: ");
 				scanf("%d", &value);
 				push(&head, value);
 				break;

@@ -5,7 +5,7 @@ void push(int stack[], int *top, int n) {
 	if (*top == n - 1)
 		printf("Stack Overflow\n");
 	else {
-		printf("Enter value to push: ");
+		printf("Enter value: ");
 		scanf("%d", &value);
 		(*top)++;
 		stack[*top] = value;
@@ -38,9 +38,9 @@ void main() {
 
 	printf("Enter the size of stack: ");
 	scanf("%d", &n);
-
+	printf("\n1. Push\n2. Pop\n3. Display\n4. Exit\n ");
 	do {
-		printf("\n1. Push\n2. Pop\n3. Display\n4. Exit\nEnter your choice: ");
+		printf("\nEnter your choice: \n");
 		scanf("%d", &choice);
 		switch (choice) {
 			case 1: push(stack, &top, n); break;

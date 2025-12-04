@@ -1,12 +1,7 @@
-1. Start program at main() and declare integer variables n1 and n2 to hold the sizes of the two arrays.
-2. Prompt the user for the size of the first array and read the value into n1.
-3. Prompt the user for the size of the second array and read the value into n2.
-4. Declare three local arrays: arr1 of length n1, arr2 of length n2, and merged of length n1 + n2.
-5. Call insertArray(arr1, n1) which asks the user for n1 integers and stores them sequentially into arr1.
-6. Call insertArray(arr2, n2) which asks the user for n2 integers and stores them sequentially into arr2.
-7. Call sortArray(arr1, n1) which applies bubble sort to reorder arr1 in ascending order.
-8. Call sortArray(arr2, n2) which applies bubble sort to reorder arr2 in ascending order.
-9. Call mergeArrays(arr1, n1, arr2, n2, merged) which walks through both sorted arrays, compares current elements, copies the smaller into merged, and advances the corresponding indices until one array is exhausted.
-10. Continue copying any remaining elements from the non-exhausted array into merged so that all elements from both arrays are included in sorted order.
-11. Print the message "Merged sorted array:" and then iterate through merged from index 0 to n1 + n2 - 1, printing each element separated by spaces.
-12. End program
+1. Start the program. Read sizes `n1` and `n2`.
+2. Declare arrays `arr1[n1]`, `arr2[n2]`, and `merged[n1+n2]`.
+3. Input elements into `arr1` and `arr2`.
+4. Sort both arrays using bubble sort.
+5. Merge the two sorted arrays into `merged` by comparing elements until one array ends, then append the remaining elements.
+6. Print all elements of the merged array.
+7. End.

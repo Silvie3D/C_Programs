@@ -4,64 +4,33 @@ Enter size of queue: 3
 2. Dequeue
 3. Display
 4. Exit
-Enter choice: 1
-Enter value to insert: 1
-Inserted 1 into queue
 
-1. Enqueue
-2. Dequeue
-3. Display
-4. Exit
 Enter choice: 1
-Enter value to insert: 2
-Inserted 2 into queue
+Enter value: 1
+Inserted 1
 
-1. Enqueue
-2. Dequeue
-3. Display
-4. Exit
 Enter choice: 1
-Enter value to insert: 3
-Inserted 3 into queue
+Enter value: 2
+Inserted 2
 
-1. Enqueue
-2. Dequeue
-3. Display
-4. Exit
+Enter choice: 1
+Enter value: 3
+Inserted 3
+
+Enter choice: 3
+Queue elements: 1 2 3 
+
 Enter choice: 1
 Queue Overflow
 
-1. Enqueue
-2. Dequeue
-3. Display
-4. Exit
 Enter choice: 2
-Deleted 1 from queue
+Deleted 1
 
-1. Enqueue
-2. Dequeue
-3. Display
-4. Exit
-Enter choice: 3
-Queue elements: 2 3
-
-1. Enqueue
-2. Dequeue
-3. Display
-4. Exit
 Enter choice: 2
-Deleted 2 from queue
+Deleted 2
 
-1. Enqueue
-2. Dequeue
-3. Display
-4. Exit
-Enter choice: 3
-Queue elements: 3
+Enter choice: 2
+Deleted 3
 
-1. Enqueue
-2. Dequeue
-3. Display
-4. Exit
 Enter choice: 4
 Exiting...
