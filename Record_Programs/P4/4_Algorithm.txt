@@ -1,10 +1,6 @@
-1. Start the program. Define a `Node` structure with `data` and `next`; set `head = NULL`.
-2. Insert at beginning: create a node, set its `next` to `head`, update `head`.
-3. Insert at end: create a node; if list empty set `head`; else traverse to last and link it.
-4. Insert at position: if pos = 1 use beginning insertion; else traverse to (pos-1) and link new node.
-5. Delete first: if empty show message; else move `head` to `head->next` and free old node.
-6. Delete last: if empty show message; if one node free it and set `head=NULL`; else traverse to second last, delete last.
-7. Delete at position: if pos = 1 delete first; else traverse to (pos-1), unlink target node, free it.
-8. Display list: if empty print message; else traverse from head printing data.
-9. In `main()`, show menu for all insert/delete/display operations and execute choices until Exit.
-10. End program.
+1. Begin with `head = NULL` to mark an empty linked list.
+2. Insert operations create a node with `data` and adjust its `next` link so it fits at the beginning, end, or at a chosen position after moving to the correct spot.
+3. Delete operations remove the node whose `data` is to be deleted—either the first, the last, or the one at a specific position—while updating surrounding `next` links.
+4. Display starts at `head` and prints each node’s `data`, or reports the list is empty.
+5. A menu repeatedly allows insert, delete, display, or exit.
+6. End the program.
