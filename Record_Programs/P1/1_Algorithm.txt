@@ -4,4 +4,4 @@
 4. Sort both arrays using bubble sort.
 5. Merge the two sorted arrays into `merged` by comparing elements until one array ends, then append the remaining elements.
 6. Print all elements of the merged array.
-7. End.
+7. End the program. 

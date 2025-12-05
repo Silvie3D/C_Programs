@@ -1,88 +1,57 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node {
-	int data;
-	struct Node *next;
-};
+struct Node { int data; struct Node *next; };
+struct Node *head = NULL;
 
-void push(struct Node **head, int value) {
-	struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
-	newNode->data = value;
-	newNode->next = NULL;
-	if (*head == NULL) {
-		*head = newNode;
-	} else {
-		struct Node *temp = *head;
-		while (temp->next != NULL) {
-			temp = temp->next;
-		}
-		temp->next = newNode;
-	}
-	printf("Pushed %d\n", value);
+struct Node* newNode(int v) {
+	struct Node *n = malloc(sizeof(struct Node));
+	n->data = v; n->next = NULL; return n;
 }
 
-void pop(struct Node **head) {
-	if (*head == NULL) {
-		printf("Stack is empty\n");
-		return;
+void push(int v) {
+	struct Node *n = newNode(v);
+	if (!head) head = n;
+	else {
+		struct Node *t = head;
+		while (t->next) t = t->next;
+		t->next = n;
 	}
-	if ((*head)->next == NULL) {
-		printf("Popped %d\n", (*head)->data);
-		free(*head);
-		*head = NULL;
-		return;
-	}
-	struct Node *temp = *head;
-	struct Node *prev = NULL;
-	while (temp->next != NULL) {
-		prev = temp;
-		temp = temp->next;
-	}
-	printf("Popped %d\n", temp->data);
-	free(temp);
-	prev->next = NULL;
+	printf("Pushed %d\n", v);
 }
 
-void display(struct Node *head) {
-	if (head == NULL) {
-		printf("Stack is empty\n");
-		return;
+void pop() {
+	if (!head) { printf("Stack is empty\n"); return; }
+	if (!head->next) {
+		printf("Popped %d\n", head->data);
+		free(head); head = NULL; return;
 	}
+	struct Node *t = head, *p = NULL;
+	while (t->next) { p = t; t = t->next; }
+	printf("Popped %d\n", t->data);
+	free(t); p->next = NULL;
+}
+
+void display() {
+	if (!head) { printf("Stack is empty\n"); return; }
 	printf("Stack elements: ");
-	struct Node *temp = head;
-	while (temp != NULL) {
-		printf("%d ", temp->data);
-		temp = temp->next;
-	}
+	for (struct Node *t = head; t; t = t->next) printf("%d ", t->data);
 	printf("\n");
 }
 
 void main() {
-	struct Node *head = NULL;
-	int choice = 0, value;
+	int c = 0, v;
 	printf("\n1. Push\n2. Pop\n3. Display\n4. Exit\n");
-	while (choice != 4) {
+	while (c != 4) {
 		printf("Enter choice: ");
-		scanf("%d", &choice);
-		switch (choice) {
-			case 1:
-				printf("Enter value: ");
-				scanf("%d", &value);
-				push(&head, value);
-				break;
-			case 2:
-				pop(&head);
-				break;
-			case 3:
-				display(head);
-				break;
-			case 4:
-				printf("Exiting program\n");
-				break;
-			default:
-				printf("Invalid choice\n");
+		scanf("%d", &c);
+		switch (c) {
+			case 1: printf("Enter value: "); 
+			scanf("%d", &v); push(v); break;
+			case 2: pop(); break;
+			case 3: display(); break;
+			case 4: printf("Exiting program\n"); break;
+			default: printf("Invalid choice\n");
 		}
 	}
 }
-

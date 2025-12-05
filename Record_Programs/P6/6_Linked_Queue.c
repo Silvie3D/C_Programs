@@ -1,79 +1,48 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node {
-	int data;
-	struct Node *next;
-};
+struct Node { int data; struct Node *next; };
+struct Node *head = NULL, *tail = NULL;
 
-void enqueue(struct Node **head, struct Node **tail, int value) {
-	struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
-	newNode->data = value;
-	newNode->next = NULL;
-	if (*head == NULL) {
-		*head = newNode;
-		*tail = newNode;
-	} else {
-		(*tail)->next = newNode;
-		*tail = newNode;
-	}
-	printf("Enqueued %d\n", value);
+struct Node* newNode(int v) {
+	struct Node *n = malloc(sizeof(struct Node));
+	n->data = v; n->next = NULL; return n;
 }
 
-void dequeue(struct Node **head, struct Node **tail) {
-	if (*head == NULL) {
-		printf("Queue is empty\n");
-		return;
-	}
-	struct Node *temp = *head;
-	printf("Dequeued %d\n", temp->data);
-	*head = (*head)->next;
-	free(temp);
-	if (*head == NULL) {
-		*tail = NULL;
-	}
+void enqueue(int v) {
+	struct Node *n = newNode(v);
+	if (!head) head = tail = n;
+	else tail->next = n, tail = n;
+	printf("Enqueued %d\n", v);
 }
 
-void display(struct Node *head) {
-	if (head == NULL) {
-		printf("Queue is empty\n");
-		return;
-	}
+void dequeue() {
+	if (!head) { printf("Queue is empty\n"); return; }
+	struct Node *t = head;
+	printf("Dequeued %d\n", t->data);
+	head = head->next; free(t);
+	if (!head) tail = NULL;
+}
+
+void display() {
+	if (!head) { printf("Queue is empty\n"); return; }
 	printf("Queue elements: ");
-	struct Node *temp = head;
-	while (temp != NULL) {
-		printf("%d ", temp->data);
-		temp = temp->next;
-	}
+	for (struct Node *t = head; t; t = t->next) printf("%d ", t->data);
 	printf("\n");
 }
 
 void main() {
-	struct Node *head = NULL;
-	struct Node *tail = NULL;
-	int choice = 0, value;
+	int c = 0, v;
 	printf("\n1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\n");
-	while (choice != 4) {
+	while (c != 4) {
 		printf("Enter choice: ");
-		scanf("%d", &choice);
-		switch (choice) {
-			case 1:
-				printf("Enter value: ");
-				scanf("%d", &value);
-				enqueue(&head, &tail, value);
-				break;
-			case 2:
-				dequeue(&head, &tail);
-				break;
-			case 3:
-				display(head);
-				break;
-			case 4:
-				printf("Exiting program\n");
-				break;
-			default:
-				printf("Invalid choice\n");
+		scanf("%d", &c);
+		switch (c) {
+			case 1: printf("Enter value: "); scanf("%d", &v); enqueue(v); break;
+			case 2: dequeue(); break;
+			case 3: display(); break;
+			case 4: printf("Exiting program\n"); break;
+			default: printf("Invalid choice\n");
 		}
 	}
 }
-

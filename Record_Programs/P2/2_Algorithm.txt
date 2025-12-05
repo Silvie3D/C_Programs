@@ -1,10 +1,6 @@
-1. Start the program and include stdio.h.
-2. Define `push()` to check overflow, take input, increment `top`, and insert the value.
-3. Define `pop()` to check underflow, print the removed value, and decrement `top`.
-4. Define `display()` to print all stack elements from `top` to 0, or show “Stack is empty.”
-5. In `main()`, declare `stack[100]`, `top = -1`, `n`, and `choice`.
-6. Read the stack size `n`.
-7. Loop a menu with options: Push, Pop, Display, Exit.
-8. Use a switch: call `push()`, `pop()`, `display()`, or exit the loop.
-9. Repeat until Exit is chosen.
-10. End program.
+1. Start the program by creating an empty stack and setting a variable to track the top position.
+2. Provide a push operation that adds a new value if space allows, and a pop operation that removes the most recent value if the stack isn’t empty.
+3. Allow the stack contents to be displayed, showing items from top to bottom or indicating that it’s empty.
+4. In the main flow, ask for the stack’s size, then repeatedly offer a menu to push, pop, view the stack, or exit.
+5. Perform the chosen action until the user decides to stop.
+6. End the program.

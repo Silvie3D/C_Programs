@@ -1,104 +1,31 @@
-
-1. Insert at beginning
-2. Insert at position
-3. Insert at end
-4. Delete from beginning
-5. Delete from position
-6. Delete from end
-7. Display
-8. Exit
+1.Insert at beginning
+2.Insert at position
+3.Insert at end
+4.Delete from beginning
+5.Delete from position
+6.Delete from end
+7.Display
+8.Exit
 Enter choice: 1
 Enter value: 1
 Node with value 1 inserted at beginning
-
-1. Insert at beginning
-2. Insert at position
-3. Insert at end
-4. Delete from beginning
-5. Delete from position
-6. Delete from end
-7. Display
-8. Exit
 Enter choice: 3
 Enter value: 3
 Node with value 3 inserted at end
-
-1. Insert at beginning
-2. Insert at position
-3. Insert at end
-4. Delete from beginning
-5. Delete from position
-6. Delete from end
-7. Display
-8. Exit
 Enter choice: 2
 Enter position: 2
 Enter value: 2
 Inserted 2 at position 2
-
-1. Insert at beginning
-2. Insert at position
-3. Insert at end
-4. Delete from beginning
-5. Delete from position
-6. Delete from end
-7. Display
-8. Exit
 Enter choice: 7
-Doubly Linked List (forward): 1 2 3
-
-1. Insert at beginning
-2. Insert at position
-3. Insert at end
-4. Delete from beginning
-5. Delete from position
-6. Delete from end
-7. Display
-8. Exit
-Enter choice: 5
-Enter position: 2
-Deleted value: 2
-
-1. Insert at beginning
-2. Insert at position
-3. Insert at end
-4. Delete from beginning
-5. Delete from position
-6. Delete from end
-7. Display
-8. Exit
+Doubly Linked List (forward): 1 2 3 
 Enter choice: 4
 Deleted value: 1
-
-1. Insert at beginning
-2. Insert at position
-3. Insert at end
-4. Delete from beginning
-5. Delete from position
-6. Delete from end
-7. Display
-8. Exit
+Enter choice: 5
+Enter position: 1
+Deleted value: 2
 Enter choice: 6
 Deleted value: 3
-
-1. Insert at beginning
-2. Insert at position
-3. Insert at end
-4. Delete from beginning
-5. Delete from position
-6. Delete from end
-7. Display
-8. Exit
-Enter choice: 7
+Enter choice: 6
 List is empty
-
-1. Insert at beginning
-2. Insert at position
-3. Insert at end
-4. Delete from beginning
-5. Delete from position
-6. Delete from end
-7. Display
-8. Exit
 Enter choice: 8
 Exiting program
